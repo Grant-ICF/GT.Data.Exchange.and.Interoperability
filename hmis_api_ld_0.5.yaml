@@ -649,13 +649,9 @@ paths:
   /client/search:
     post:
       operationId: clientSearch
-      summary: Search for clients by identifying information using POST
+      summary: Search for clients by identifying information or PersonalID by using POST
       description: |  
-        Search for client records using various identifying criteria:
-        - Name (first, last, partial matches)
-        - Date of birth
-        - Social Security Number
-        This endpoint uses POST to protect PII from URL logging (security best practice).
+        BASELINE SCENARIO 1: Search for clients by identifying information or PersonalID. This endpoint uses POST to protect PII from URL logging (security best practice).
       x-workflow-step: "client-search" 
       x-privacy-consideration: "POST method protects PII from server logs"
       # EXPERIMENTAL: Algebraic effect annotations (Phase 1)
@@ -779,10 +775,8 @@ paths:
       operationId: postClient
       summary: Create a new client record
       description: |
-        Creates a new client record in the HMIS.
-        
-        Validates data quality requirements per HUD Data Standards. 
-        Returns the complete client record including system-generated PersonalID.
+        BASELINE SCENARIO 2: Generate a new client record        
+        Validates data quality requirements per HUD Data Standards. Returns the complete client record including system-generated PersonalID.
       
       # SEMANTIC ANNOTATION: Documents workflow and compliance requirements
       x-workflow-step: "client-creation" 
@@ -879,7 +873,7 @@ paths:
       operationId: updateClient
       summary: Update an existing client record
       description: |
-        Updates an existing client record in the HMIS.
+        BASELINE SCENARIO 3: Update an existing client record
         
         Supports partial updates - only fields provided will be updated.
         System automatically updates DateUpdated and UserID metadata.
@@ -1004,7 +998,7 @@ paths:
                     x-semantic-uri: http://hmis.hud.gov/errors#NotFoundError
 
   # ==========================================================================
-  # BASELINE SCENARIO 4: Generate a list of enrollments related to a single client
+  # BASELINE SCENARIO 4: Generate a list of enrollments related to a single project
   # Policy Trace: Client service history (CoC Program Interim Rule)
   # Workflow: Case management, service coordination, longitudinal analysis
   # ==========================================================================
@@ -1013,8 +1007,8 @@ paths:
       operationId: getClientsByProject
       summary: Get all clients associated with a specific project
       description: |
-        Returns a list of clients enrolled in the specified project.
-        
+        BASELINE SCENARIO 4: Generate a list of enrollments related to a single project.
+
         Supports filtering by date range.
         Useful for project-level reporting and case management.
       # SEMANTIC ANNOTATION: Workflow and policy context
@@ -1061,7 +1055,7 @@ paths:
             x-semantic-uri: http://hmis.hud.gov/ontology#hasProjectID 
             x-filter-type: "equal-to" 
 
-        - name: StartDate
+        - name: EntryDate
           in: query
           required: false
           description: Filter enrollments with EntryDate on or after this date
@@ -1346,6 +1340,7 @@ paths:
       operationId: getProjects
       summary: Get projects filtered by funder and project type
       description: |
+        BASELINE SCENARIO 6: Generate a list of projects filtered by funder and project type
         Returns a list of projects matching specified criteria.
         
         Supports filtering by:
@@ -1565,20 +1560,20 @@ paths:
                     x-semantic-uri: http://hmis.hud.gov/errors#ValidationError
 
 # ==========================================================================
-# BASELINE SCENARIO 8: Generate a list of clients filtered by funder and project type
+# BASELINE SCENARIO 7: Generate a list of clients filtered by funder and project type
 # ==========================================================================
   /clients:
     get:
       operationId: getClients
       summary: Get clients enrolled in projects filtered by funder and project type
       description: |
+        BASELINE SCENARIO 7: Generate a list of clients filtered by funder and project type
         Returns a list of clients enrolled in projects matching specified criteria.
         
         Supports filtering by:
         - Funding source (via Project → Funder join)
         - Project type
         - Enrollment date range
-        - Whether enrollment has ended (exitDate null/not null)
         
         Note: This returns unique clients across matching projects.
         For enrollment-level detail, use /client/{PersonalID}/enrollments.
@@ -1785,13 +1780,14 @@ paths:
 
 
 # ==========================================================================
-# BASELINE SCENARIO 9: Comprehensive return of all a person’s services and data changes in CSV format
+# BASELINE SCENARIO 8: Comprehensive return of all a person’s services and data changes in CSV format
 # ==========================================================================
   /csvexport:
     get:
       operationId: getcsvexport
       summary: Get CSV export for a single client filtered by parameters or return only the changes to the client record
       description: |
+        BASELINE SCENARIO 8: Comprehensive return of all a person's services and data changes in CSV format
         Returns the entire CSV specifications based on the parameters provided.
       parameters:
         - name: EntryDate
@@ -3547,10 +3543,12 @@ components:
           type: string
           maxLength: 32
           x-semantic-uri: http://hmis.hud.gov/ontology#hasEnrollmentID
+          x-hud-data-element: "5.06.1"
         PersonalID:
           type: string
           maxLength: 32
           x-semantic-uri: http://hmis.hud.gov/ontology#hasPersonalID
+          x-hud-data-element: "5.08"
         InformationDate:
           type: string
           format: date
