@@ -1,0 +1,2063 @@
+@prefix hmis: <http://www.semanticweb.org/61084/ontologies/2026/2/hmis#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+hmis:VictimServiceProvider a owl:ObjectProperty ;
+  rdfs:domain hmis:Organization ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.01" ;
+  hmis:dataElementFieldNumber "3" ;
+  hmis:dataDictionaryName "VictimServiceProvider" ;
+  hmis:CSVExportTable "Organization" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:ContinuumProject a owl:ObjectProperty ;
+  rdfs:domain hmis:Project ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.02" ;
+  hmis:dataElementFieldNumber "5" ;
+  hmis:dataDictionaryName "ContinuumProject" ;
+  hmis:CSVExportTable "Project" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:ProjectType a owl:ObjectProperty ;
+  rdfs:domain hmis:Project ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.02" ;
+  hmis:dataElementFieldNumber "6" ;
+  hmis:dataDictionaryName "ProjectType" ;
+  hmis:CSVExportTable "Project" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#2.02.6> .
+
+
+hmis:HousingType a owl:ObjectProperty ;
+  rdfs:domain hmis:Project ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.02" ;
+  hmis:dataElementFieldNumber "D" ;
+  hmis:dataDictionaryName "HousingType" ;
+  hmis:CSVExportTable "Project" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#2.02.D> .
+
+
+hmis:RRHSubType a owl:ObjectProperty ;
+  rdfs:domain hmis:Project ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.02" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "RRHSubType" ;
+  hmis:CSVExportTable "Project" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#2.02.A> .
+
+
+hmis:ResidentialAffiliation a owl:ObjectProperty ;
+  rdfs:domain hmis:Project ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.02" ;
+  hmis:dataElementFieldNumber "B" ;
+  hmis:dataDictionaryName "ResidentialAffiliation" ;
+  hmis:CSVExportTable "Project" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:TargetPopulation a owl:ObjectProperty ;
+  rdfs:domain hmis:Project ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.02" ;
+  hmis:dataElementFieldNumber "7" ;
+  hmis:dataDictionaryName "TargetPopulation" ;
+  hmis:CSVExportTable "Project" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#2.02.7> .
+
+
+hmis:HOPWAMedAssistedLivingFac a owl:ObjectProperty ;
+  rdfs:domain hmis:Project ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.02" ;
+  hmis:dataElementFieldNumber "8" ;
+  hmis:dataDictionaryName "HOPWAMedAssistedLivingFac" ;
+  hmis:CSVExportTable "Project" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#2.02.8> .
+
+
+hmis:Funder a owl:ObjectProperty ;
+  rdfs:domain hmis:FundSource ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.06" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "Funder" ;
+  hmis:CSVExportTable "Funder" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#2.06.1> .
+
+
+hmis:GeographyType a owl:ObjectProperty ;
+  rdfs:domain hmis:Geography ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.03" ;
+  hmis:dataElementFieldNumber "8" ;
+  hmis:dataDictionaryName "GeographyType" ;
+  hmis:CSVExportTable "ProjectCoC" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#2.03.4> .
+
+
+hmis:HouseholdType a owl:ObjectProperty ;
+  rdfs:domain hmis:Inventory ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.07" ;
+  hmis:dataElementFieldNumber "4" ;
+  hmis:dataDictionaryName "HouseholdType" ;
+  hmis:CSVExportTable "Inventory" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#2.07.4> .
+
+
+hmis:Availability a owl:ObjectProperty ;
+  rdfs:domain hmis:Inventory ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.07" ;
+  hmis:dataElementFieldNumber "6" ;
+  hmis:dataDictionaryName "Availability" ;
+  hmis:CSVExportTable "Inventory" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#2.07.6> .
+
+
+hmis:ESBedType a owl:ObjectProperty ;
+  rdfs:domain hmis:Inventory ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.07" ;
+  hmis:dataElementFieldNumber "5" ;
+  hmis:dataDictionaryName "ESBedType" ;
+  hmis:CSVExportTable "Inventory" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#2.07.5> .
+
+
+hmis:HMISParticipationType a owl:ObjectProperty ;
+  rdfs:domain hmis:HMISParticipation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.08" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "HMISParticipationType" ;
+  hmis:CSVExportTable "HMISParticipation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#2.08.1> .
+
+
+hmis:AccessPoint a owl:ObjectProperty ;
+  rdfs:domain hmis:CEParticipation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.09" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "AccessPoint" ;
+  hmis:CSVExportTable "CEParticipation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:PreventionAssessment a owl:ObjectProperty ;
+  rdfs:domain hmis:CEParticipation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.09" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "PreventionAssessment" ;
+  hmis:CSVExportTable "CEParticipation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:CrisisAssessment a owl:ObjectProperty ;
+  rdfs:domain hmis:CEParticipation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.09" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "CrisisAssessment" ;
+  hmis:CSVExportTable "CEParticipation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:HousingAssessment a owl:ObjectProperty ;
+  rdfs:domain hmis:CEParticipation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.09" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "HousingAssessment" ;
+  hmis:CSVExportTable "CEParticipation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:DirectServices a owl:ObjectProperty ;
+  rdfs:domain hmis:CEParticipation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.09" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "DirectServices" ;
+  hmis:CSVExportTable "CEParticipation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:ReceivesReferrals a owl:ObjectProperty ;
+  rdfs:domain hmis:CEParticipation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "2.09" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "ReceivesReferrals" ;
+  hmis:CSVExportTable "CEParticipation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:NameDataQuality a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.01" ;
+  hmis:dataElementFieldNumber "5" ;
+  hmis:dataDictionaryName "NameDataQuality" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#3.01.5> .
+
+
+hmis:SSNDataQuality a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.02" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "SSNDataQuality" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#3.02.2> .
+
+
+hmis:DOBDataQuality a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.03" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "DOBDataQuality" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#3.03.2> .
+
+
+hmis:Sex a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.21" ;
+  hmis:dataDictionaryName "Sex" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#4.21> .
+
+
+hmis:AmIndAKNative a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.04" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "AmIndAKNative" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:Asian a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.04" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "Asian" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:BlackAfAmerican a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.04" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "BlackAfAmerican" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:HispanicLatinao a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.04" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "HispanicLatinao" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:MidEastNAfrican a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.04" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "MidEastNAfrican" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:NativeHIPacific a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.04" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "NativeHIPacific" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:White a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.04" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "White" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:RaceNone a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.04" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "RaceNone" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.6> .
+
+
+hmis:VeteranStatus a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.07" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "VeteranStatus" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:WorldWarII a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V1" ;
+  hmis:dataElementFieldNumber "3" ;
+  hmis:dataDictionaryName "WorldWarII" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:KoreanWar a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V1" ;
+  hmis:dataElementFieldNumber "4" ;
+  hmis:dataDictionaryName "KoreanWar" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:VietnamWar a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V1" ;
+  hmis:dataElementFieldNumber "5" ;
+  hmis:dataDictionaryName "VietnamWar" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:DesertStorm a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V1" ;
+  hmis:dataElementFieldNumber "6" ;
+  hmis:dataDictionaryName "DesertStorm" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:AfghanistanOEF a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V1" ;
+  hmis:dataElementFieldNumber "7" ;
+  hmis:dataDictionaryName "AfghanistanOEF" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:IraqOIF a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V1" ;
+  hmis:dataElementFieldNumber "8" ;
+  hmis:dataDictionaryName "IraqOIF" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:IraqOND a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V1" ;
+  hmis:dataElementFieldNumber "9" ;
+  hmis:dataDictionaryName "IraqOND" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:OtherTheater a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V1" ;
+  hmis:dataElementFieldNumber "10" ;
+  hmis:dataDictionaryName "OtherTheater" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:MilitaryBranch a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V1" ;
+  hmis:dataElementFieldNumber "11" ;
+  hmis:dataDictionaryName "MilitaryBranch" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#V1.11> .
+
+
+hmis:DischargeStatus a owl:ObjectProperty ;
+  rdfs:domain hmis:Client ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V1" ;
+  hmis:dataElementFieldNumber "12" ;
+  hmis:dataDictionaryName "DischargeStatus" ;
+  hmis:CSVExportTable "Client" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#V1.12> .
+
+
+hmis:RelationshipToHoH a owl:ObjectProperty ;
+  rdfs:domain hmis:Household ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.15" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "RelationshipToHoH" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#3.15.1> .
+
+
+hmis:LivingSituation a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.917" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "LivingSituation" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#3.12.1> .
+
+
+hmis:RentalSubsidyType a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.917" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "RentalSubsidyType" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#3.12.A> .
+
+
+hmis:LengthOfStay a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.917" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "LengthOfStay" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#3.917.2> .
+
+
+hmis:LOSUnderThreshold a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.917" ;
+  hmis:dataElementFieldNumber "2 A" ;
+  hmis:dataDictionaryName "LOSUnderThreshold" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:LOSUnderThreshold a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.917" ;
+  hmis:dataElementFieldNumber "2 B" ;
+  hmis:dataDictionaryName "LOSUnderThreshold" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:PreviousStreetESSH a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.917" ;
+  hmis:dataElementFieldNumber "2 C" ;
+  hmis:dataDictionaryName "PreviousStreetESSH" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:TimesHomelessPastThreeYears a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.917" ;
+  hmis:dataElementFieldNumber "4" ;
+  hmis:dataDictionaryName "TimesHomelessPastThreeYears" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#3.917.4> .
+
+
+hmis:MonthsHomelessPastThreeYears a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.917" ;
+  hmis:dataElementFieldNumber "5" ;
+  hmis:dataDictionaryName "MonthsHomelessPastThreeYears" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#3.917.5> .
+
+
+hmis:DisablingCondition a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.08" ;
+  hmis:dataDictionaryName "DisablingCondition" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:ClientEnrolledInPATH a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "P3" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "ClientEnrolledInPATH" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:ReasonNotEnrolled a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "P3" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "ReasonNotEnrolled" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#P3.A> .
+
+
+hmis:PercentAMI a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V4" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "PercentAMI" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#V4.1> .
+
+
+hmis:ReferralSource a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R1" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "ReferralSource" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R1.1> .
+
+
+hmis:EligibleForRHY a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R2" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "EligibleForRHY" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:ReasonNoServices a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R2" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "ReasonNoServices" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R2.A> .
+
+
+hmis:RunawayYouth a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R2" ;
+  hmis:dataElementFieldNumber "B" ;
+  hmis:dataDictionaryName "RunawayYouth" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:FormerWardChildWelfare a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R11" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "FormerWardChildWelfare" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:ChildWelfareYears a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R11" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "ChildWelfareYears" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R11.A> .
+
+
+hmis:FormerWardJuvenileJustice a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R12" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "FormerWardJuvenileJustice" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:JuvenileJusticeYears a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R12" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "JuvenileJusticeYears" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R11.A> .
+
+
+hmis:UnemploymentFam a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R13" ;
+  hmis:dataElementFieldNumber "9" ;
+  hmis:dataDictionaryName "UnemploymentFam" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:MentalHealthDisorderFam a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R13" ;
+  hmis:dataElementFieldNumber "11" ;
+  hmis:dataDictionaryName "MentalHealthDisorderFam" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:PhysicalDisabilityFam a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R13" ;
+  hmis:dataElementFieldNumber "15" ;
+  hmis:dataDictionaryName "PhysicalDisabilityFam" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:AlcoholDrugUseDisorderFam a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R13" ;
+  hmis:dataElementFieldNumber "21" ;
+  hmis:dataDictionaryName "AlcoholDrugUseDisorderFam" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:InsufficientIncome a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R13" ;
+  hmis:dataElementFieldNumber "22" ;
+  hmis:dataDictionaryName "InsufficientIncome" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:IncarceratedParent a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R13" ;
+  hmis:dataElementFieldNumber "24" ;
+  hmis:dataDictionaryName "IncarceratedParent" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:VAMCStation a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V6" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "VAMCStation" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#V6.1> .
+
+
+hmis:TargetScreenReqd a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "TargetScreenReqd" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:TimeToHousingLoss a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "TimeToHousingLoss" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#V7.A> .
+
+
+hmis:AnnualPercentAMI a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "B" ;
+  hmis:dataDictionaryName "AnnualPercentAMI" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#V7.B> .
+
+
+hmis:LiteralHomelessHistory a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "C" ;
+  hmis:dataDictionaryName "LiteralHomelessHistory" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#V7.C> .
+
+
+hmis:ClientLeaseholder a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "D" ;
+  hmis:dataDictionaryName "ClientLeaseholder" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:HOHLeaseholder a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "E" ;
+  hmis:dataDictionaryName "HOHLeaseholder" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:SubsidyAtRisk a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "F" ;
+  hmis:dataDictionaryName "SubsidyAtRisk" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:EvictionHistory a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "G" ;
+  hmis:dataDictionaryName "EvictionHistory" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#V7.G> .
+
+
+hmis:CriminalRecord a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "H" ;
+  hmis:dataDictionaryName "CriminalRecord" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:IncarceratedAdult a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "I" ;
+  hmis:dataDictionaryName "IncarceratedAdult" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#V7.I> .
+
+
+hmis:PrisonDischarge a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "J" ;
+  hmis:dataDictionaryName "PrisonDischarge" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:SexOffender a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "K" ;
+  hmis:dataDictionaryName "SexOffender" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:DisabledHoH a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "L" ;
+  hmis:dataDictionaryName "DisabledHoH" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:CurrentPregnant a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "M" ;
+  hmis:dataDictionaryName "CurrentPregnant" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:SingleParent a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "N" ;
+  hmis:dataDictionaryName "SingleParent" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:DependentUnder6 a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "O" ;
+  hmis:dataDictionaryName "DependentUnder6" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#V7.O> .
+
+
+hmis:HH5Plus a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "P" ;
+  hmis:dataDictionaryName "HH5Plus" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:CoCPrioritized a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V7" ;
+  hmis:dataElementFieldNumber "Q" ;
+  hmis:dataDictionaryName "CoCPrioritized" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:MentalHealthConsultation a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V10" ;
+  hmis:dataDictionaryName "MentalHealthConsultation" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#V10> .
+
+
+hmis:TranslationNeeded a owl:ObjectProperty ;
+  rdfs:domain hmis:Enrollment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "C4" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "TranslationNeeded" ;
+  hmis:CSVExportTable "Enrollment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:Destination a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.12" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "Destination" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#3.12.1> .
+
+
+hmis:DestinationSubsidyType a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "3.12" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "DestinationSubsidyType" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#3.12.A> .
+
+
+hmis:HousingAssessment a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "W5" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "HousingAssessment" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#W5.1> .
+
+
+hmis:SubsidyInformation a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "W5" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "SubsidyInformation" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#W5.A-B> .
+
+
+hmis:SubsidyInformation a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "W5" ;
+  hmis:dataElementFieldNumber "B" ;
+  hmis:dataDictionaryName "SubsidyInformation" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#W5.A-B> .
+
+
+hmis:ProjectCompletionStatus a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R17" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "ProjectCompletionStatus" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R17.1> .
+
+
+hmis:EarlyExitReason a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R17" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "EarlyExitReason" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R17.A> .
+
+
+hmis:ExchangeForSex a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R15" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "ExchangeForSex" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:ExchangeForSexPastThreeMonths a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R15" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "ExchangeForSexPastThreeMonths" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:CountOfExchangeForSex a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R15" ;
+  hmis:dataElementFieldNumber "B" ;
+  hmis:dataDictionaryName "CountOfExchangeForSex" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R15.B> .
+
+
+hmis:AskedOrForcedToExchangeForSex a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R15" ;
+  hmis:dataElementFieldNumber "C" ;
+  hmis:dataDictionaryName "AskedOrForcedToExchangeForSex" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:AskedOrForcedToExchangeForSexPastThreeMonths a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R15" ;
+  hmis:dataElementFieldNumber "D" ;
+  hmis:dataDictionaryName "AskedOrForcedToExchangeForSexPastThreeMonths" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:WorkplaceViolenceThreats a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R16" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "WorkplaceViolenceThreats" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:WorkplacePromiseDifference a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R16" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "WorkplacePromiseDifference" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:CoercedToContinueWork a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R16" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "CoercedToContinueWork" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:LaborExploitPastThreeMonths a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R16" ;
+  hmis:dataElementFieldNumber "B" ;
+  hmis:dataDictionaryName "LaborExploitPastThreeMonths" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:CounselingReceived a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R18" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "CounselingReceived" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:IndividualCounseling a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R18" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "IndividualCounseling" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:FamilyCounseling a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R18" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "FamilyCounseling" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:GroupCounseling a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R18" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "GroupCounseling" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:PostExitCounselingPlan a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R18" ;
+  hmis:dataElementFieldNumber "3" ;
+  hmis:dataDictionaryName "PostExitCounselingPlan" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:DestinationSafeClient a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R19" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "DestinationSafeClient" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:DestinationSafeWorker a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R19" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "DestinationSafeWorker" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R19.A> .
+
+
+hmis:PosAdultConnections a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R19" ;
+  hmis:dataElementFieldNumber "3" ;
+  hmis:dataDictionaryName "PosAdultConnections" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R19.A> .
+
+
+hmis:PosPeerConnections a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R19" ;
+  hmis:dataElementFieldNumber "4" ;
+  hmis:dataDictionaryName "PosPeerConnections" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R19.A> .
+
+
+hmis:PosCommunityConnections a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R19" ;
+  hmis:dataElementFieldNumber "5" ;
+  hmis:dataDictionaryName "PosCommunityConnections" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R19.A> .
+
+
+hmis:AftercareProvided a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R20" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "AftercareProvided" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R20.2> .
+
+
+hmis:EmailSocialMedia a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R20" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "EmailSocialMedia" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:Telephone a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R20" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "Telephone" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:InPersonIndividual a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R20" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "InPersonIndividual" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:InPersonGroup a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R20" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "InPersonGroup" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.10> .
+
+
+hmis:CMExitReason a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "V9" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "CMExitReason" ;
+  hmis:CSVExportTable "Exit" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#V9.1> .
+
+
+hmis:IncomeFromAnySource a owl:ObjectProperty ;
+  rdfs:domain hmis:Income ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.02" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "IncomeFromAnySource" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:Earned a owl:ObjectProperty ;
+  rdfs:domain hmis:Income ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.02" ;
+  hmis:dataElementFieldNumber "3" ;
+  hmis:dataDictionaryName "Earned" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:Unemployment a owl:ObjectProperty ;
+  rdfs:domain hmis:Income ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.02" ;
+  hmis:dataElementFieldNumber "4" ;
+  hmis:dataDictionaryName "Unemployment" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:SSI a owl:ObjectProperty ;
+  rdfs:domain hmis:Income ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.02" ;
+  hmis:dataElementFieldNumber "5" ;
+  hmis:dataDictionaryName "SSI" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:SSDI a owl:ObjectProperty ;
+  rdfs:domain hmis:Income ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.02" ;
+  hmis:dataElementFieldNumber "6" ;
+  hmis:dataDictionaryName "SSDI" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:VADisabilityService a owl:ObjectProperty ;
+  rdfs:domain hmis:Income ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.02" ;
+  hmis:dataElementFieldNumber "7" ;
+  hmis:dataDictionaryName "VADisabilityService" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:VADisabilityNonService a owl:ObjectProperty ;
+  rdfs:domain hmis:Income ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.02" ;
+  hmis:dataElementFieldNumber "8" ;
+  hmis:dataDictionaryName "VADisabilityNonService" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:PrivateDisability a owl:ObjectProperty ;
+  rdfs:domain hmis:Income ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.02" ;
+  hmis:dataElementFieldNumber "9" ;
+  hmis:dataDictionaryName "PrivateDisability" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:WorkersComp a owl:ObjectProperty ;
+  rdfs:domain hmis:Income ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.02" ;
+  hmis:dataElementFieldNumber "10" ;
+  hmis:dataDictionaryName "WorkersComp" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:TANF a owl:ObjectProperty ;
+  rdfs:domain hmis:Income ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.02" ;
+  hmis:dataElementFieldNumber "11" ;
+  hmis:dataDictionaryName "TANF" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:GA a owl:ObjectProperty ;
+  rdfs:domain hmis:Income ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.02" ;
+  hmis:dataElementFieldNumber "12" ;
+  hmis:dataDictionaryName "GA" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:SocSecRetirement a owl:ObjectProperty ;
+  rdfs:domain hmis:Income ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.02" ;
+  hmis:dataElementFieldNumber "13" ;
+  hmis:dataDictionaryName "SocSecRetirement" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:Pension a owl:ObjectProperty ;
+  rdfs:domain hmis:Income ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.02" ;
+  hmis:dataElementFieldNumber "14" ;
+  hmis:dataDictionaryName "Pension" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:ChildSupport a owl:ObjectProperty ;
+  rdfs:domain hmis:Income ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.02" ;
+  hmis:dataElementFieldNumber "15" ;
+  hmis:dataDictionaryName "ChildSupport" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:Alimony a owl:ObjectProperty ;
+  rdfs:domain hmis:Income ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.02" ;
+  hmis:dataElementFieldNumber "16" ;
+  hmis:dataDictionaryName "Alimony" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:OtherIncomeSource a owl:ObjectProperty ;
+  rdfs:domain hmis:Income ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.02" ;
+  hmis:dataElementFieldNumber "17" ;
+  hmis:dataDictionaryName "OtherIncomeSource" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:BenefitsFromAnySource a owl:ObjectProperty ;
+  rdfs:domain hmis:Benefit ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.03" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "BenefitsFromAnySource" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:SNAP a owl:ObjectProperty ;
+  rdfs:domain hmis:Benefit ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.03" ;
+  hmis:dataElementFieldNumber "3" ;
+  hmis:dataDictionaryName "SNAP" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:WIC a owl:ObjectProperty ;
+  rdfs:domain hmis:Benefit ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.03" ;
+  hmis:dataElementFieldNumber "4" ;
+  hmis:dataDictionaryName "WIC" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:TANFChildCare a owl:ObjectProperty ;
+  rdfs:domain hmis:Benefit ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.03" ;
+  hmis:dataElementFieldNumber "5" ;
+  hmis:dataDictionaryName "TANFChildCare" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:TANFTransportation a owl:ObjectProperty ;
+  rdfs:domain hmis:Benefit ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.03" ;
+  hmis:dataElementFieldNumber "6" ;
+  hmis:dataDictionaryName "TANFTransportation" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:OtherTANF a owl:ObjectProperty ;
+  rdfs:domain hmis:Benefit ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.03" ;
+  hmis:dataElementFieldNumber "7" ;
+  hmis:dataDictionaryName "OtherTANF" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:OtherBenefitsSource a owl:ObjectProperty ;
+  rdfs:domain hmis:Benefit ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.03" ;
+  hmis:dataElementFieldNumber "8" ;
+  hmis:dataDictionaryName "OtherBenefitsSource" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:InsuranceFromAnySource a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "InsuranceFromAnySource" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:Medicaid a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "3" ;
+  hmis:dataDictionaryName "Medicaid" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:NoMedicaidReason a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "3A" ;
+  hmis:dataDictionaryName "NoMedicaidReason" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#4.04.A> .
+
+
+hmis:Medicare a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "4" ;
+  hmis:dataDictionaryName "Medicare" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:NoMedicareReason a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "4A" ;
+  hmis:dataDictionaryName "NoMedicareReason" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#4.04.A> .
+
+
+hmis:SCHIP a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "5" ;
+  hmis:dataDictionaryName "SCHIP" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:NoSCHIPReason a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "5A" ;
+  hmis:dataDictionaryName "NoSCHIPReason" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#4.04.A> .
+
+
+hmis:VHAServices a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "6" ;
+  hmis:dataDictionaryName "VHAServices" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:NoVHAReason a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "6A" ;
+  hmis:dataDictionaryName "NoVHAReason" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#4.04.A> .
+
+
+hmis:EmployerProvided a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "7" ;
+  hmis:dataDictionaryName "EmployerProvided" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:NoEmployerProvidedReason a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "7A" ;
+  hmis:dataDictionaryName "NoEmployerProvidedReason" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#4.04.A> .
+
+
+hmis:COBRA a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "8" ;
+  hmis:dataDictionaryName "COBRA" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:NoCOBRAReason a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "8A" ;
+  hmis:dataDictionaryName "NoCOBRAReason" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#4.04.A> .
+
+
+hmis:PrivatePay a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "9" ;
+  hmis:dataDictionaryName "PrivatePay" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:NoPrivatePayReason a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "9A" ;
+  hmis:dataDictionaryName "NoPrivatePayReason" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#4.04.A> .
+
+
+hmis:StateHealthIns a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "10" ;
+  hmis:dataDictionaryName "StateHealthIns" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:NoStateHealthInsReason a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "10A" ;
+  hmis:dataDictionaryName "NoStateHealthInsReason" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#4.04.A> .
+
+
+hmis:IndianHealthServices a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "11" ;
+  hmis:dataDictionaryName "IndianHealthServices" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:NoIndianHealthServicesReason a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "11A" ;
+  hmis:dataDictionaryName "NoIndianHealthServicesReason" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#4.04.A> .
+
+
+hmis:OtherInsurance a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthInsurance ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.04" ;
+  hmis:dataElementFieldNumber "12" ;
+  hmis:dataDictionaryName "OtherInsurance" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:ADAP a owl:ObjectProperty ;
+  rdfs:domain hmis:Service ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "W3" ;
+  hmis:dataElementFieldNumber "3" ;
+  hmis:dataDictionaryName "ADAP" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:NoADAPReason a owl:ObjectProperty ;
+  rdfs:domain hmis:Service ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "W3" ;
+  hmis:dataElementFieldNumber "B" ;
+  hmis:dataDictionaryName "NoADAPReason" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#W3> .
+
+
+hmis:RyanWhiteMedDent a owl:ObjectProperty ;
+  rdfs:domain hmis:Service ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "W3" ;
+  hmis:dataElementFieldNumber "4" ;
+  hmis:dataDictionaryName "RyanWhiteMedDent" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:NoRyanWhiteReason a owl:ObjectProperty ;
+  rdfs:domain hmis:Service ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "W3" ;
+  hmis:dataElementFieldNumber "C" ;
+  hmis:dataDictionaryName "NoRyanWhiteReason" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#W3> .
+
+
+hmis:ConnectionWithSOAR a owl:ObjectProperty ;
+  rdfs:domain hmis:Service ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "P4" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "ConnectionWithSOAR" ;
+  hmis:CSVExportTable "IncomeBenefits" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:DomesticViolenceSurvivor a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthAndDV ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.11" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "DomesticViolenceSurvivor" ;
+  hmis:CSVExportTable "HealthAndDV" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:WhenOccurred a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthAndDV ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.11" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "WhenOccurred" ;
+  hmis:CSVExportTable "HealthAndDV" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#4.11.A> .
+
+
+hmis:CurrentlyFleeing a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthAndDV ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.11" ;
+  hmis:dataElementFieldNumber "B" ;
+  hmis:dataDictionaryName "CurrentlyFleeing" ;
+  hmis:CSVExportTable "HealthAndDV" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:GeneralHealthStatus a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthAndDV ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R7" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "GeneralHealthStatus" ;
+  hmis:CSVExportTable "HealthAndDV" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R7.1> .
+
+
+hmis:DentalHealthStatus a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthAndDV ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R8" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "DentalHealthStatus" ;
+  hmis:CSVExportTable "HealthAndDV" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R7.1> .
+
+
+hmis:MentalHealthStatus a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthAndDV ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R9" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "MentalHealthStatus" ;
+  hmis:CSVExportTable "HealthAndDV" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R7.1> .
+
+
+hmis:PregnancyStatus a owl:ObjectProperty ;
+  rdfs:domain hmis:HealthAndDV ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R10" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "PregnancyStatus" ;
+  hmis:CSVExportTable "HealthAndDV" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:LastGradeCompleted a owl:ObjectProperty ;
+  rdfs:domain hmis:EmploymentEducation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R4" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "LastGradeCompleted" ;
+  hmis:CSVExportTable "EmploymentEducation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R4.1> .
+
+
+hmis:SchoolStatus a owl:ObjectProperty ;
+  rdfs:domain hmis:EmploymentEducation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R5" ;
+  hmis:dataElementFieldNumber "1" ;
+  hmis:dataDictionaryName "SchoolStatus" ;
+  hmis:CSVExportTable "EmploymentEducation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R5.1> .
+
+
+hmis:Employed a owl:ObjectProperty ;
+  rdfs:domain hmis:EmploymentEducation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R6" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "Employed" ;
+  hmis:CSVExportTable "EmploymentEducation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:EmploymentType a owl:ObjectProperty ;
+  rdfs:domain hmis:EmploymentEducation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R6" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "EmploymentType" ;
+  hmis:CSVExportTable "EmploymentEducation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R6.A> .
+
+
+hmis:NotEmployedReason a owl:ObjectProperty ;
+  rdfs:domain hmis:EmploymentEducation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "R6" ;
+  hmis:dataElementFieldNumber "B" ;
+  hmis:dataDictionaryName "NotEmployedReason" ;
+  hmis:CSVExportTable "EmploymentEducation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#R6.B> .
+
+
+hmis:TCellCountAvailable a owl:ObjectProperty ;
+  rdfs:domain hmis:Disability ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "W4" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "TCellCountAvailable" ;
+  hmis:CSVExportTable "Disabilities" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:TCellSource a owl:ObjectProperty ;
+  rdfs:domain hmis:Disability ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "W4" ;
+  hmis:dataElementFieldNumber "B" ;
+  hmis:dataDictionaryName "TCellSource" ;
+  hmis:CSVExportTable "Disabilities" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#W4.B> .
+
+
+hmis:ViralLoadAvailable a owl:ObjectProperty ;
+  rdfs:domain hmis:Disability ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "W4" ;
+  hmis:dataElementFieldNumber "3" ;
+  hmis:dataDictionaryName "ViralLoadAvailable" ;
+  hmis:CSVExportTable "Disabilities" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#W4.3> .
+
+
+hmis:ViralLoadSource a owl:ObjectProperty ;
+  rdfs:domain hmis:Disability ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "W4" ;
+  hmis:dataElementFieldNumber "D" ;
+  hmis:dataDictionaryName "ViralLoadSource" ;
+  hmis:CSVExportTable "Disabilities" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#W4.B> .
+
+
+hmis:AntiRetroviral a owl:ObjectProperty ;
+  rdfs:domain hmis:Disability ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "W6" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "AntiRetroviral" ;
+  hmis:CSVExportTable "Disabilities" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:ReferralOutcome a owl:ObjectProperty ;
+  rdfs:domain hmis:Service ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "P2" ;
+  hmis:dataDictionaryName "ReferralOutcome" ;
+  hmis:CSVExportTable "Services" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#P2.A> .
+
+
+hmis:CurrentLivingSituation a owl:ObjectProperty ;
+  rdfs:domain hmis:CurrentLivingSituation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.12" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "CurrentLivingSituation" ;
+  hmis:CSVExportTable "CurrentLivingSituation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#3.12.1> .
+
+
+hmis:CLSSubsidyType a owl:ObjectProperty ;
+  rdfs:domain hmis:CurrentLivingSituation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.12" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "CLSSubsidyType" ;
+  hmis:CSVExportTable "CurrentLivingSituation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#3.12.A> .
+
+
+hmis:LeaveSituation14Days a owl:ObjectProperty ;
+  rdfs:domain hmis:CurrentLivingSituation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.12" ;
+  hmis:dataElementFieldNumber "B" ;
+  hmis:dataDictionaryName "LeaveSituation14Days" ;
+  hmis:CSVExportTable "CurrentLivingSituation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:SubsequentResidence a owl:ObjectProperty ;
+  rdfs:domain hmis:CurrentLivingSituation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.12" ;
+  hmis:dataElementFieldNumber "C" ;
+  hmis:dataDictionaryName "SubsequentResidence" ;
+  hmis:CSVExportTable "CurrentLivingSituation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:ResourcesToObtain a owl:ObjectProperty ;
+  rdfs:domain hmis:CurrentLivingSituation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.12" ;
+  hmis:dataElementFieldNumber "D" ;
+  hmis:dataDictionaryName "ResourcesToObtain" ;
+  hmis:CSVExportTable "CurrentLivingSituation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:LeaseOwn60Day a owl:ObjectProperty ;
+  rdfs:domain hmis:CurrentLivingSituation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.12" ;
+  hmis:dataElementFieldNumber "E" ;
+  hmis:dataDictionaryName "LeaseOwn60Day" ;
+  hmis:CSVExportTable "CurrentLivingSituation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:MovedTwoOrMore a owl:ObjectProperty ;
+  rdfs:domain hmis:CurrentLivingSituation ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.12" ;
+  hmis:dataElementFieldNumber "F" ;
+  hmis:dataDictionaryName "MovedTwoOrMore" ;
+  hmis:CSVExportTable "CurrentLivingSituation" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.8> .
+
+
+hmis:AssessmentType a owl:ObjectProperty ;
+  rdfs:domain hmis:CEAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.19" ;
+  hmis:dataElementFieldNumber "3" ;
+  hmis:dataDictionaryName "AssessmentType" ;
+  hmis:CSVExportTable "Assessment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#4.19.3> .
+
+
+hmis:AssessmentLevel a owl:ObjectProperty ;
+  rdfs:domain hmis:CEAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.19" ;
+  hmis:dataElementFieldNumber "4" ;
+  hmis:dataDictionaryName "AssessmentLevel" ;
+  hmis:CSVExportTable "Assessment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#4.19.4> .
+
+
+hmis:PrioritizationStatus a owl:ObjectProperty ;
+  rdfs:domain hmis:CEAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.19" ;
+  hmis:dataElementFieldNumber "7" ;
+  hmis:dataDictionaryName "PrioritizationStatus" ;
+  hmis:CSVExportTable "Assessment" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#4.19.7> .
+
+
+hmis:Event a owl:ObjectProperty ;
+  rdfs:domain hmis:CEEvent ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.20" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "Event" ;
+  hmis:CSVExportTable "Event" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#4.20.2> .
+
+
+hmis:ProbSolDivRRResult a owl:ObjectProperty ;
+  rdfs:domain hmis:CEEvent ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.20" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "ProbSolDivRRResult" ;
+  hmis:CSVExportTable "Event" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:ReferralCaseManageAfter a owl:ObjectProperty ;
+  rdfs:domain hmis:CEEvent ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.20" ;
+  hmis:dataElementFieldNumber "B" ;
+  hmis:dataDictionaryName "ReferralCaseManageAfter" ;
+  hmis:CSVExportTable "Event" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#1.7> .
+
+
+hmis:ReferralResult a owl:ObjectProperty ;
+  rdfs:domain hmis:CEEvent ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "4.20" ;
+  hmis:dataElementFieldNumber "D" ;
+  hmis:dataDictionaryName "ReferralResult" ;
+  hmis:CSVExportTable "Event" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#4.20.D> .
+
+
+hmis:CurrentSchoolAttend a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "C3" ;
+  hmis:dataElementFieldNumber "2" ;
+  hmis:dataDictionaryName "CurrentSchoolAttend" ;
+  hmis:CSVExportTable "YouthEducationStatus" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#C3.2> .
+
+
+hmis:MostRecentEdStatus a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "C3" ;
+  hmis:dataElementFieldNumber "A" ;
+  hmis:dataDictionaryName "MostRecentEdStatus" ;
+  hmis:CSVExportTable "YouthEducationStatus" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#C3.A> .
+
+
+hmis:CurrentEdStatus a owl:ObjectProperty ;
+  rdfs:domain hmis:EnrollAssessment ;
+  rdfs:range hmis:Concept ;
+  hmis:dataElementNumber "C3" ;
+  hmis:dataElementFieldNumber "B" ;
+  hmis:dataDictionaryName "CurrentEdStatus" ;
+  hmis:CSVExportTable "YouthEducationStatus" ;
+hmis:linkedVocabulary <http://www.semanticweb.org/ontologies/FY2026/hmis/hmisDataElements#C3.B> .
+
+
