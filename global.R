@@ -287,4 +287,23 @@ hmis_elements <- clean_MetaData %>%
 hmis_element_choices <- hmis_elements$dataDictionaryName
 names(hmis_element_choices) <- hmis_elements$selector_label
 
+# UI specific functions and objects ----
+
+cards <- list(
+  card(
+    full_screen = TRUE,
+    card_header("First Card"),
+    "First card"
+  ),
+  card(
+    full_screen = TRUE,
+    card_header("Second Card"),
+    "Second Card"
+  ),
+  card(
+    full_screen = TRUE,
+    card_header("Third Card"),
+    "Third Card"
+  )
+)
 
