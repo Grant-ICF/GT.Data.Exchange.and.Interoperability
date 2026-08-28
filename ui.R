@@ -12,14 +12,16 @@ ui <- page_navbar(
                   selectizeInput(
                     inputId = "selectScenario",
                     label = "Select Baseline Scenario:",
-                    choices = names(ScenarioList),
+                    choices = c("", scenario_choices),
+                    selected = NULL,
                     multiple = FALSE,
                     options = list(
-                      placeholder = "Choose a scenario..."
+                    placeholder = "Choose a scenario...",
+                    allowEmptyOption = TRUE
                     )
                   ),
                 card(
-                  "Selected HMIS Data Elements",
+                  "HMIS Data Elements Used in this Scenario:",
                   tableOutput("scenarioSelected_table")
                 ),
                 layout_columns(cards[[2]],cards[[3]])

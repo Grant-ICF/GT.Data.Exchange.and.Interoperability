@@ -207,8 +207,6 @@ if (file.exists(ontology_path) && !is.null(ontology_cache$ontology_mtime)) {
 }
 
 
-
-
 results <- ontology_cache$properties
 vocab_values <- ontology_cache$vocab_values
 scenarios <- ontology_cache$de_scenarios
@@ -296,12 +294,15 @@ hmis_elements <- clean_MetaData %>%
     )
   )
 
-hmis_element_choices <- hmis_elements$dataDictionaryName
-names(hmis_element_choices) <- hmis_elements$selector_label
-names(scenario_choices) <- unique(scenarios$scenario_id)
-
 
 # UI specific functions and objects ----
+
+#Lists to for multi-select options
+
+hmis_element_choices <- hmis_elements$dataDictionaryName
+names(hmis_element_choices) <- hmis_elements$selector_label
+scenario_choices <- unique(scenarios_temp$Label) #UPDATE once "label" is in the Data Exchange Scenario ontology
+RequestResponse_choices <- c("All", "Request Schema", "Response Schema")
 
 cards <- list(
   card(

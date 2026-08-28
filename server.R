@@ -2,20 +2,28 @@
 
 server <- function(input, output, session) {
   
+  
+# Home Page ----  
+  
+  # Set the main table
   updateSelectizeInput(
     session = session,
-    inputId = "selected_elements",
-    choices = hmis_element_choices,
-    server = TRUE
+    inputId = "selectScenario"
   )
-  
-  # Reactive table of selected HMIS elements
   
   scenarioSelected_metadata <- reactive({
     
     req(input$selectScenario)
-    selected_elements <- ScenarioList[[input$selectScenario]]
     
+    #Select the elements used in the scenario
+    selected_elements <- scenarios_temp |>
+      filter(Label == input$selectScenario) |>
+      select(requestElement_id, responseElement_id) |>
+      unlist(use.names = FALSE) |>
+      unique()
+    selected_elements <- selected_elements[!is.na(selected_elements)]
+      
+    #Build the table the shows the data elements used in the table  
     clean_MetaData %>%
       dplyr::filter(
         dataDictionaryName %in% selected_elements  |
@@ -23,16 +31,27 @@ server <- function(input, output, session) {
       dplyr::select(
         dataDictionaryName,
         dataElementNumberAndField,
-        CSVExportTable,
         field_type
       ) %>%
-      dplyr::distinct()
+      dplyr::distinct() |> 
+      arrange(dataElementNumberAndField)
   })
   
   output$scenarioSelected_table <- renderTable({
     req(input$selectScenario)
     scenarioSelected_metadata()
   })
+  
+# JSON Schema Builder Page ----
+  
+  updateSelectizeInput(
+    session = session,
+    inputId = "selected_elements",
+    choices = hmis_element_choices,
+    server = TRUE
+  )
+  
+  #Reactive table of selected HMIS elements
   
   selected_metadata <- reactive({
     
@@ -118,3 +137,6 @@ server <- function(input, output, session) {
     }
   )
 }
+
+
+
