@@ -9,8 +9,30 @@ server <- function(input, output, session) {
     server = TRUE
   )
   
-  
   # Reactive table of selected HMIS elements
+  
+  scenarioSelected_metadata <- reactive({
+    
+    req(input$selectScenario)
+    selected_elements <- ScenarioList[[input$selectScenario]]
+    
+    clean_MetaData %>%
+      dplyr::filter(
+        dataDictionaryName %in% selected_elements  |
+          dataElementNumberAndField %in% selected_elements) %>%
+      dplyr::select(
+        dataDictionaryName,
+        dataElementNumberAndField,
+        CSVExportTable,
+        field_type
+      ) %>%
+      dplyr::distinct()
+  })
+  
+  output$scenarioSelected_table <- renderTable({
+    req(input$selectScenario)
+    scenarioSelected_metadata()
+  })
   
   selected_metadata <- reactive({
     
@@ -32,11 +54,8 @@ server <- function(input, output, session) {
   
   
   output$selected_table <- renderTable({
-    
     req(input$selected_elements)
-    
     selected_metadata()
-    
   })
   
   

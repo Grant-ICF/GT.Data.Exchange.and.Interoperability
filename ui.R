@@ -8,16 +8,23 @@ ui <- page_navbar(
   nav_panel("Home", 
             page_fluid(
               page_sidebar(
-                sidebar = card(
-                 card_header("Sidebar Content"),
-                 "Option 1", "Next to option 1", 
-                 br(), 
-                 "Option2"
+                sidebar = 
+                  selectizeInput(
+                    inputId = "selectScenario",
+                    label = "Select Baseline Scenario:",
+                    choices = names(ScenarioList),
+                    multiple = FALSE,
+                    options = list(
+                      placeholder = "Choose a scenario..."
+                    )
+                  ),
+                card(
+                  "Selected HMIS Data Elements",
+                  tableOutput("scenarioSelected_table")
                 ),
-                layout_columns(cards[[1]],cards[[2]]),
-                cards[[3]]
+                layout_columns(cards[[2]],cards[[3]])
             ))),
-  nav_panel("Updated JSON Schema Builder",
+  nav_panel("JSON Schema Builder",
             page_fluid(
               page_sidebar(
                 sidebar =list( 
@@ -53,47 +60,18 @@ ui <- page_navbar(
                     verbatimTextOutput("schema_output")
                   )
                 )
-                )))
-  # nav_panel("JSON Schema Builder", 
-  #           fluidPage(
-  #             titlePanel("HMIS Ontology JSON Schema Builder"),
-  #             sidebarLayout(
-  #               sidebarPanel(
-  #                 selectizeInput(
-  #                   inputId = "selected_elements",
-  #                   label = "Select HMIS Data Elements",
-  #                   choices = NULL,
-  #                   multiple = TRUE,
-  #                   options = list(
-  #                     placeholder = "Search by data dictionary name, element number, or field type",
-  #                     plugins = list("remove_button"),
-  #                     maxItems = NULL
-  #                   )
-  #                 ),
-  #                 br(),
-  #                 
-  #                 actionButton(
-  #                   inputId = "build_schema",
-  #                   label = "Build JSON Schema",
-  #                   class = "btn-primary"
-  #                 ),
-  #                 br(),
-  #                 br(),
-  #                 
-  #                 downloadButton(
-  #                   outputId = "download_schema",
-  #                   label = "Download JSON"
-  #                 )
-  #               ),
-  #               mainPanel(
-  #                 h4("Selected HMIS Data Elements"),
-  #                 tableOutput("selected_table"),
-  #                 br(),
-  #                 h4("Generated JSON Schema"),
-  #                 verbatimTextOutput("schema_output")
-  #               )
-  #             )
-  #           )
-  #           )
-#)
+                ))),
+  nav_panel("Example", 
+            page_fluid(
+              page_sidebar(
+                sidebar = 
+                  selectInput(
+                    "selectScenario",
+                    "Select Baseline Scenario:",
+                    scenario_choices,
+                    multiple = FALSE
+                  ),
+                cards[[1]],
+                layout_columns(cards[[2]],cards[[3]])
+              )))
 )
