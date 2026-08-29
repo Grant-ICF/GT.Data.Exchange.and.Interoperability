@@ -42,6 +42,128 @@ server <- function(input, output, session) {
     scenarioSelected_metadata()
   })
   
+  # Build the JSON Schemas
+  openapi_object <- reactive({
+    
+    req(input$selectScenario)
+    
+    scenario_data <- scenarios_temp |>
+      filter(Label == input$selectScenario)
+    
+    requestElements <- scenario_data |>
+      pull(requestElement_id) |>
+      unique()
+    
+    requestElements <- requestElements[!is.na(requestElements)]
+    
+    responseElements <- scenario_data |>
+      pull(responseElement_id) |>
+      unique()
+    
+    responseElements <- responseElements[!is.na(responseElements)]
+    
+    request_schema <- build_object_schema(
+      fields = requestElements,
+      metadata = clean_MetaData,
+      vocab_values = clean_vocab_values
+    )
+    
+    response_schema <- build_object_schema(
+      fields = responseElements,
+      metadata = clean_MetaData,
+      vocab_values = clean_vocab_values
+    )
+    
+    list(
+      operationId = gsub("\\s+", "", input$selectScenario),
+      requestBody = list(
+        required = TRUE,
+        content = list(
+          `application/json` = list(
+            schema = request_schema
+          )
+        )
+      ),
+      responses = list(
+        `200` = list(
+          description = "Successful response",
+          content = list(
+            `application/json` = list(
+              schema = response_schema
+            )
+          )
+        )
+      )
+    )
+    
+  })  
+
+  # Render the outputs
+  output$requestSchema_output <- renderText({
+    
+    req(openapi_object())
+    
+    jsonlite::toJSON(
+      openapi_object()$requestBody,
+      pretty = TRUE,
+      auto_unbox = TRUE
+    )
+    
+  })
+  
+  output$responseSchema_output <- renderText({
+    
+    req(openapi_object())
+    
+    jsonlite::toJSON(
+      openapi_object()$responses$`200`,
+      pretty = TRUE,
+      auto_unbox = TRUE
+    )
+    
+  })
+  
+  output$openapi_output <- renderText({
+    
+    req(openapi_object())
+    
+    jsonlite::toJSON(
+      openapi_object(),
+      pretty = TRUE,
+      auto_unbox = TRUE
+    )
+    
+  })
+  
+  #Download the OpenAPI JSON Script
+  output$download_OpenAPIschema <- downloadHandler(
+    
+    filename = function() {
+      paste0(
+        "hmis_Fullschema_",
+        Sys.Date(),
+        ".json"
+      )
+    },
+    
+    content = function(file) {
+      req(openapi_object())
+      
+      schema_json <- jsonlite::toJSON(
+        openapi_object(),
+        pretty = TRUE,
+        auto_unbox = TRUE,
+        null = "null"
+      )
+      
+      writeLines(
+        schema_json,
+        con = file
+      )
+    }
+  )
+  
+  
 # JSON Schema Builder Page ----
   
   updateSelectizeInput(

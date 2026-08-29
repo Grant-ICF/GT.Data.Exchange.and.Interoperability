@@ -8,7 +8,7 @@ ui <- page_navbar(
   nav_panel("Home", 
             page_fluid(
               page_sidebar(
-                sidebar = 
+                sidebar = list(
                   selectizeInput(
                     inputId = "selectScenario",
                     label = "Select Baseline Scenario:",
@@ -18,14 +18,26 @@ ui <- page_navbar(
                     options = list(
                     placeholder = "Choose a scenario...",
                     allowEmptyOption = TRUE
+                    )), br(),
+                    downloadButton(
+                      outputId = "download_OpenAPIschema",
+                      label = "Download Full Schema"
                     )
                   ),
-                card(
-                  "HMIS Data Elements Used in this Scenario:",
-                  tableOutput("scenarioSelected_table")
-                ),
-                layout_columns(cards[[2]],cards[[3]])
-            ))),
+                accordion(
+                  open = FALSE,
+                  accordion_panel(
+                    "HMIS Data Elements Used in this Scenario:",
+                    tableOutput("scenarioSelected_table")
+                  ), br(),
+                  card(
+                    "JSON Schemas",
+                    navset_pill_list(
+                      nav_panel("Full Schema", verbatimTextOutput("openapi_output")),
+                      nav_panel("Request",verbatimTextOutput("requestSchema_output") ),
+                      nav_panel("Response", verbatimTextOutput("responseSchema_output")))
+                    )
+                )))),
   nav_panel("JSON Schema Builder",
             page_fluid(
               page_sidebar(
