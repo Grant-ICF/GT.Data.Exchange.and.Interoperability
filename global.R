@@ -8,6 +8,9 @@ library(bslib)
 library(rdflib)
 library(readxl)
 
+## source required files
+source("html_text_blocks.R")
+
 ## Functions ----
 time_step <- function(label, expr) {
   message("\n--- START: ", label, " ---")
@@ -308,8 +311,8 @@ RequestResponse_choices <- c("Full Schema", "Request Schema", "Response Schema")
 cards <- list(
   card(
     full_screen = TRUE,
-    card_header("First Card"),
-    "First card"
+    card_header("Overview"),
+    HomePage_overview
   ),
   card(
     full_screen = TRUE,
