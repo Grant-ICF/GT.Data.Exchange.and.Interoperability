@@ -416,13 +416,13 @@ cards <- list(
   ),
   card(
     full_screen = TRUE,
-    card_header("Second Card"),
-    "Second Card"
+    card_header("Privacy and Security"),
+    "Coming soon"
   ),
   card(
     full_screen = TRUE,
-    card_header("Third Card"),
-    "Third Card"
+    card_header("Guides and Resources"),
+    "Coming Soon"
   )
 )
 

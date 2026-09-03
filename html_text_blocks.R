@@ -1,22 +1,17 @@
 #HTML Messages
 
 HomePage_overview <- HTML("<h2>Welcome!</h2>
-              <p><b>The HMIS API Product Suite</b> 
+              <p><b>The HMIS Data Exchange Product Suite</b> 
               is an <a href = 'https://github.com/Grant-ICF/GT.Data.Exchange.and.Interoperability/tree/main'
               > open-source</a>
               project developed in collaboration with the Data Exchange and Interoperability Workgroup, which included several HMIS vendors and the Department of Housing and Urban Development (HUD).<p>
               <p> This product suite is intended to support HMIS Vendors and developers 
                           implement data exchange and interoperability processes for 
                           Continuums of Care (CoCs). The intention of this suite of 
-                          products is to directly benefit people experiencing homelessness 
-                          by reducing the need for duplicative storytelling and 
-                          improving access to critical services or support needed 
-                          to resolve their housing crisis. It also minimizes the data entry burden on 
-                          service providers by reducing duplicative data entry, allowing them to focus 
-                          more on delivering care.</p>
-                          <p> Please note that HMIS API Reference guide is intended to provide an 
-                          overview of each of the components of the HMIS API Product Suite. 
-                          The HMIS API Product Suite is a living set of tools for HMIS vendors, developers, and CoCs.<p>
+                          products is to empower end users with the ability to provide machine readable 
+                          documentation of the HMIS data they want to use in a data exchange project.</p>
+                          
+                          
                     
                           
                           ")

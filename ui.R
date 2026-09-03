@@ -2,7 +2,7 @@
 
 
 ui <- page_navbar(
-  title = "HMIS API Product Suite",
+  title = "HMIS Data Exchange Product Suite",
   id = "page",
   theme = bs_theme(bootswatch = "lumen"), #update to this? https://posit-dev.github.io/brand-yml/
   nav_panel("Home",
@@ -85,5 +85,13 @@ ui <- page_navbar(
                     verbatimTextOutput("schema_output")
                   )
                 )
-                )))
+                ))),
+  nav_panel("Privacy and Security",
+            page_fluid(
+              cards[[2]]
+            )),
+  nav_panel("Guides and Resources",
+            page_fluid(
+              cards[[3]]
+            ))
 )
