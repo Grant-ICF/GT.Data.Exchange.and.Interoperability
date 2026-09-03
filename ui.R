@@ -70,8 +70,15 @@ ui <- page_navbar(
                 open = c("Selected HMIS Data Elements"),
                 accordion_panel(
                   "Selected HMIS Data Elements",
-                    tableOutput("selected_table")
-                  ),
+                  navset_pill(
+                  nav_panel(
+                    "Data Table",
+                    tableOutput("selected_table")),
+                  nav_panel(
+                    "Data Dictionary",
+                    uiOutput("datadictionary_output")
+                  )
+                  )),
                 br(),
                 accordion_panel(
                   "Generated JSON Schema",
