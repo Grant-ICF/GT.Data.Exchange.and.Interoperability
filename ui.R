@@ -23,11 +23,6 @@ ui <- page_navbar(
                       plugins = list("remove_button"),
                       maxItems = NULL
                     )), br(),
-                  actionButton(
-                    inputId = "build_schema",
-                    label = "Build JSON Schema",
-                    class = "btn-primary"
-                  ),
                   downloadButton(
                     outputId = "download_schema",
                     label = "Download JSON"
@@ -50,14 +45,12 @@ ui <- page_navbar(
                         tableOutput("selected_table")),
                       nav_panel(
                         "Data Dictionary",
-                        uiOutput("datadictionary_output")
+                        uiOutput("datadictionary_output")),
+                      nav_panel(
+                        "JSON Schema",
+                        verbatimTextOutput("schema_output")
                       )
-                    )),
-                  br(),
-                  accordion_panel(
-                    "Generated JSON Schema",
-                    verbatimTextOutput("schema_output")
-                  )
+                    ))
                 )
               ))),
   nav_panel("HMIS Data Exchange Scenarios", 

@@ -241,7 +241,7 @@ server <- function(input, output, session) {
   )
   
   
-# JSON Schema Builder Page ----
+# HMIS Data Model Explorer ----
   
   updateSelectizeInput(
     session = session,
@@ -332,7 +332,7 @@ server <- function(input, output, session) {
   
   # Build schema only when button is clicked
   
-  generated_schema <- eventReactive(input$build_schema, {
+  generated_schema <- eventReactive(input$selected_elements, {
     
     req(input$selected_elements)
     
@@ -343,7 +343,6 @@ server <- function(input, output, session) {
     )
     
   })
-  
   
   # Render JSON in the app
   
