@@ -331,7 +331,9 @@ build_element_html <- function(df) {
         "Data Collected About",
         "Collection Point",
         "System Logic and Other System Issues",
-        "CSV"
+        "CSV",
+        "Rationale",
+        "Data Collection Instruction"
       ),
       function(field) {
         
@@ -346,10 +348,23 @@ build_element_html <- function(df) {
               style = "margin-top:15px;margin-bottom:5px;"
             ),
             
+            if (field == "Data Collection Instruction"){
+              tags$p(
+                tags$a(
+                  href = value,
+                  "Link to documentation",
+                  target = "_blank"
+                  ),
+                style = "margin-bottom:10px;"
+                )
+              
+            } else {
+            
             tags$p(
               value,
               style = "margin-bottom:10px;"
             )
+            }
             
           )
           
@@ -418,6 +433,11 @@ cards <- list(
     full_screen = TRUE,
     card_header("Privacy and Security"),
     "Coming soon"
+  ),
+  card(
+    full_screen = TRUE,
+    card_header("HMIS Data Mapping"),
+    "Coming Soon"
   ),
   card(
     full_screen = TRUE,
